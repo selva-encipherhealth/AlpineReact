@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { FiChevronDown } from 'react-icons/fi';
 import { headerMenuItems } from '../../layout/header/menuItems';
 import { twMerge } from 'tailwind-merge';
@@ -24,13 +24,13 @@ const NavBar = ({ headerPrimary, setMenuOpen, menuOpen, pathname, sticky }) => {
           // NAV ITEM
           <li
             className={twMerge(
-              ' flex flex-col items-center relative group ',
+              'flex flex-col items-center relative group',
               sticky ? 'lg:py-7' : 'lg:py-[36px] py-0'
             )}
             key={i}
           >
             <Link
-              href={item.link !== '' ? `/${item?.link}` : '/'}
+              to={item.link !== '' ? `/${item?.link}` : '/'}
               className="flex flex-col items-center whitespace-nowrap nav-link relative"
             >
               <span
@@ -59,7 +59,7 @@ const NavBar = ({ headerPrimary, setMenuOpen, menuOpen, pathname, sticky }) => {
                     key={i}
                     className="text-black hover:text-primary transition-all duration-300 ease-in-out px-6 group/subDrop"
                   >
-                    <Link href={dropdownItem?.link} onClick={() => setMenuOpen(false)}>
+                    <Link to={dropdownItem?.link} onClick={() => setMenuOpen(false)}>
                       {dropdownItem?.text}
                     </Link>
 

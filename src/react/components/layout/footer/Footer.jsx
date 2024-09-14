@@ -1,12 +1,12 @@
-import Link from 'next/link';
+import React from 'react';
+import { Link } from 'react-router-dom'; // Use react-router-dom for navigation
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { MdMail } from 'react-icons/md';
 import { IoCall } from 'react-icons/io5';
-import { BsFillPhoneVibrateFill } from "react-icons/bs";
-import SocialButton from '@/components/SocialButton';
-import Image from 'next/image';
-import Logo from '@/public/assets/logo_10.png';
-import { footerMenuItems } from '@/components/layout/footer/footerMenuItems';
+import { BsFillPhoneVibrateFill } from 'react-icons/bs';
+import SocialButton from '../../SocialButton';
+import Logo from '../../../public/assets/logo_10.png'; // Make sure to update the path if needed
+import { footerMenuItems } from '../../layout/footer/footerMenuItems';
 
 const Footer = () => {
   // Social media links
@@ -24,7 +24,6 @@ const Footer = () => {
       href: '',
       name: 'facebook',
     },
-   
   ];
 
   // Address details
@@ -57,16 +56,15 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row justify-between flex-wrap gap-12 w-full">
             {/* About Us */}
             <div className="max-w-[420px]">
-              <Image
+              <img
                 src={Logo}
                 alt="Logo"
                 className="w-48 mb-3"
                 width={200}
                 height={100}
-                priority
               />
               <p className="sm:text-lg">
-              Alpine Pro Health is a highly experienced provider of Revenue Cycle Management processes and analytics solutions in the healthcare industry.
+                Alpine Pro Health is a highly experienced provider of Revenue Cycle Management processes and analytics solutions in the healthcare industry.
               </p>
 
               {/* Social Media Icons */}
@@ -94,38 +92,22 @@ const Footer = () => {
               <ul className="list-disc list-inside sm:text-lg footer-nav-list">
                 {footerMenuItems.companyLinks?.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href}>{link.text}</Link>
+                    <Link to={link.href}>{link.text}</Link>
                   </li>
                 ))}
               </ul>
             </div>
             {/* Company */}
 
-            {/* Support */}
-            {/* <div className="">
-              <h5 className="text-2xl mb-[22px] bottom-0 border-b-2 border-solid pb-1 w-fit font-light">
-                Support
-              </h5>
-              <ul className="list-disc list-inside sm:text-lg footer-nav-list">
-                {footerMenuItems.supportLinks.map((link, index) => (
-                  <li key={index}>
-                    <Link href={link.href}>{link.text}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div> */}
-            {/* Support */}
-
             {/* Address */}
             <div className="max-w-[350px]">
               <h5 className="text-2xl mb-[22px] bottom-0 border-b-2 border-solid pb-1 w-fit font-light">
-              Get In Touch
+                Get In Touch
               </h5>
               <div className="sm:text-lg space-y-3">
                 {addressDetails.map((line, index) => (
                   <div key={index} className="flex gap-2">
                     {line?.icon && <span>{line.icon && <line.icon className="text-3xl" />}</span>}
-
                     {line?.href ? (
                       <a href={line?.href}>
                         <p>{line.text}</p>

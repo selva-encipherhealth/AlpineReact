@@ -1,19 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import useSticky from '../../../hooks/useSticky';
+import { Link, useLocation } from 'react-router-dom';
 import { MdClose } from 'react-icons/md';
-import NavBar from '../layout/header/NavBar';
+import NavBar from '../../layout/header/NavBar';
 import { twMerge } from 'tailwind-merge';
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
-import Logo from '../../public/assets/logo_9.png';
+import useSticky from '../../../hooks/useSticky';
+import Logo from '../../../public/assets/logo_9.png';
 
 const Header = ({ headerPrimary }) => {
   const { sticky } = useSticky(150);
-  const pathname = usePathname();
+  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -32,8 +30,8 @@ const Header = ({ headerPrimary }) => {
           )}
         >
           {/*---------------------- LOGO START ----------------------*/}
-          <Link href="/" className="w-48 grid place-items-center">
-            <Image src={Logo} width={200} height={100} alt="logo" className="rounded-lg" />
+          <Link to="/" className="w-48 grid place-items-center">
+            <img src={Logo} width={200} height={100} alt="logo" className="rounded-lg" />
           </Link>
           {/*---------------------- LOGO END ----------------------*/}
 
@@ -41,11 +39,12 @@ const Header = ({ headerPrimary }) => {
           <NavBar
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
-            pathname={pathname}
+            pathname={location.pathname}
             headerPrimary={headerPrimary}
             sticky={sticky}
           />
           {/*---------------------- NAVBAR END ----------------------*/}
+
           <button
             className={twMerge(
               'text-4xl block lg:hidden',
