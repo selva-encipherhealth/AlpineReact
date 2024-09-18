@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/AlpineReact/alpineprohealth/static/css/main.dc97bcbd.css",
+    "main.js": "/AlpineReact/alpineprohealth/static/js/main.a7c86e5f.js",
+    "static/js/453.ed3810f9.chunk.js": "/AlpineReact/alpineprohealth/static/js/453.ed3810f9.chunk.js",
+    "static/media/client-3_3.png": "/AlpineReact/alpineprohealth/static/media/client-3_3.afa71ca689281ad72df5.png",
+    "static/media/Who_We_Are.png": "/AlpineReact/alpineprohealth/static/media/Who_We_Are.c9e968daac1ee8006026.png",
+    "static/media/Who_We_Are_2.png": "/AlpineReact/alpineprohealth/static/media/Who_We_Are_2.8ea17fcea752db8140fb.png",
+    "static/media/Our_Solution_Process.png": "/AlpineReact/alpineprohealth/static/media/Our_Solution_Process.9d86f4a3968ead0b6452.png",
+    "static/media/client-5_5.png": "/AlpineReact/alpineprohealth/static/media/client-5_5.572e587a89262a760997.png",
+    "static/media/client-7_7.png": "/AlpineReact/alpineprohealth/static/media/client-7_7.d12bd8108dfec7b50699.png",
+    "static/media/logo_9.png": "/AlpineReact/alpineprohealth/static/media/logo_9.ae07a371f75f23236637.png",
+    "static/media/software-dev1.jpg": "/AlpineReact/alpineprohealth/static/media/software-dev1.9d0ef9016f51bb9081b6.jpg",
+    "static/media/footer-bg.jpg": "/AlpineReact/alpineprohealth/static/media/footer-bg.b45ccb73a12905f74cff.jpg",
+    "static/media/Risk_Adjustment_4.png": "/AlpineReact/alpineprohealth/static/media/Risk_Adjustment_4.6d4f1315e3466b6ba112.png",
+    "static/media/Physician_Quality_Reporting_3.png": "/AlpineReact/alpineprohealth/static/media/Physician_Quality_Reporting_3.10de4400d235a7617216.png",
+    "static/media/client-7_7_1.png": "/AlpineReact/alpineprohealth/static/media/client-7_7_1.64216da0c784a300cfdd.png",
+    "static/media/member-3_1.png": "/AlpineReact/alpineprohealth/static/media/member-3_1.64216da0c784a300cfdd.png",
+    "static/media/Revenue_Cycle_Management_4.png": "/AlpineReact/alpineprohealth/static/media/Revenue_Cycle_Management_4.ce43a96c892e8864ee01.png",
+    "static/media/Outpatients_4.png": "/AlpineReact/alpineprohealth/static/media/Outpatients_4.31b380d5657a1e6d340d.png",
+    "static/media/client-6_6.png": "/AlpineReact/alpineprohealth/static/media/client-6_6.f02fdab1a97a25e6d3b6.png",
+    "static/media/Value_Added_Service_4.png": "/AlpineReact/alpineprohealth/static/media/Value_Added_Service_4.9e5cf774afa6c649300b.png",
+    "static/media/service-bg.svg": "/AlpineReact/alpineprohealth/static/media/service-bg.718db0f6b88c9c52fea9.svg",
+    "static/media/Inpatient_5.png": "/AlpineReact/alpineprohealth/static/media/Inpatient_5.cae62e1aa83744d1791b.png",
+    "static/media/ai-dev.jpg": "/AlpineReact/alpineprohealth/static/media/ai-dev.e21e2efab6773e7ee43f.jpg",
+    "static/media/app-dev.jpg": "/AlpineReact/alpineprohealth/static/media/app-dev.e21e2efab6773e7ee43f.jpg",
+    "static/media/benefit-bg.jpg": "/AlpineReact/alpineprohealth/static/media/benefit-bg.e21e2efab6773e7ee43f.jpg",
+    "static/media/game-development.jpg": "/AlpineReact/alpineprohealth/static/media/game-development.e21e2efab6773e7ee43f.jpg",
+    "static/media/software-dev.jpg": "/AlpineReact/alpineprohealth/static/media/software-dev.e21e2efab6773e7ee43f.jpg",
+    "static/media/web-dev.jpg": "/AlpineReact/alpineprohealth/static/media/web-dev.e21e2efab6773e7ee43f.jpg",
+    "static/media/service-item-bg-shape.svg": "/AlpineReact/alpineprohealth/static/media/service-item-bg-shape.843dd1e51f94bdd4086ecf18985df6a2.svg",
+    "index.html": "/AlpineReact/alpineprohealth/index.html",
+    "main.dc97bcbd.css.map": "/AlpineReact/alpineprohealth/static/css/main.dc97bcbd.css.map",
+    "main.a7c86e5f.js.map": "/AlpineReact/alpineprohealth/static/js/main.a7c86e5f.js.map",
+    "453.ed3810f9.chunk.js.map": "/AlpineReact/alpineprohealth/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc97bcbd.css",
+    "static/js/main.a7c86e5f.js"
+  ]
+}
