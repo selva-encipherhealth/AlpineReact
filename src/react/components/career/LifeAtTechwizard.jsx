@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Title from '@/components/common/Title';
+import React from 'react';
+import Title from '../../components/common/Title'; // Adjust the import path as necessary
 
 const LifeAtTechwizard = ({ lifeAtTechWizardData }) => {
   return (
@@ -11,19 +11,18 @@ const LifeAtTechwizard = ({ lifeAtTechWizardData }) => {
           primary={true}
         />
 
-        {/* LIFE AT CPL */}
+        {/* LIFE AT TECHWIZARD */}
         <div>
           <ul className="grid md:grid-cols-3 sm:grid-cols-2 gap-x-8 gap-y-12">
             {lifeAtTechWizardData?.map((item) => (
-              <li key={item?.id}>
+              <li key={item?.id} className="flex flex-col">
                 <div>
                   {/* IMAGE */}
-                  <Image
+                  <img
                     src={item.image}
                     alt={item.title}
                     width={500}
                     height={500}
-                    priority
                     className="w-full min-h-[300px] object-cover"
                   />
                 </div>

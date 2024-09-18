@@ -1,17 +1,15 @@
-'use client';
-import Image from 'next/image';
+import React, { useState } from 'react';
+import Button from '../../Button';
+import Reveal from '../../common/ScrollAnimation';
+import Title from '../../common/Title';
+import { whoWeAreData } from '../../../data/whoWeAreData';
+import { aboutUsData } from '../../about/aboutUsData';
+import VideoPopup from '../../VideoPopup';
 import { twMerge } from 'tailwind-merge';
 
-import Button from '@/components/Button';
-import Reveal from '@/components/common/ScrollAnimation';
-import Title from '@/components/common/Title';
-import { whoWeAreData } from '@/data/whoWeAreData';
-import { aboutUsData } from '@/components/about/aboutUsData';
-import VideoPopup from '@/components/VideoPopup';
-import { useState } from 'react';
-
 const WhoWeAreHometwo = () => {
-  const [popupOpen, setPopupOpen] = useState();
+  const [popupOpen, setPopupOpen] = useState(false);
+
   return (
     <section className="py-24">
       <div className="container">
@@ -26,16 +24,14 @@ const WhoWeAreHometwo = () => {
                     index === 1 ? 'absolute -bottom-10 lg:-right-10 right-0 w-4/6' : ''
                   )}
                 >
-                  <Image
+                  <img
                     src={img}
                     alt="Who We Are"
                     className={twMerge(
                       'w-full h-full object-cover rounded-lg border border-solid border-gray-200',
                       index === 0 ? 'min-h-[520px]' : 'h-[280px] w-full'
                     )}
-                    width={550}
-                    height={550}
-                    priority
+                    style={{ width: '550px', height: '550px' }}
                   />
                 </div>
               </Reveal>
@@ -76,7 +72,7 @@ const WhoWeAreHometwo = () => {
               classNames="text-left justify-start items-start mb-0"
             />
             <p className="lg:text-xl text-lg text-gray-700 my-6">
-              {/*  eslint-disable-next-line react/no-unescaped-entities */}
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               At TechWizard, we harness the power of skills and experience to shape tomorrow's
               technologies. With a team of experts, we drive innovation and progress in the tech
               world.

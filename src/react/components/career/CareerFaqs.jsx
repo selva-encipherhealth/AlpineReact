@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Accordion from '../Accordion';
-import Title from '@/components/common/Title';
+import Title from '../../components/common/Title';
 
 const CareerFaqs = ({ faqData }) => {
   const [openAccodion, setOpenAccodion] = useState(0);

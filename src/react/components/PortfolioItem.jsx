@@ -1,23 +1,22 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import React from 'react';
+import { Link } from 'react-router-dom'; // React Router for routing
 import { twMerge } from 'tailwind-merge';
 import { HiMiniArrowLongRight } from 'react-icons/hi2';
 
 const PortfolioItem = ({ portfolio, category, primary, masonry }) => {
   return (
     <Link
-      href={`/portfolio/${portfolio?.portfolioName?.toLowerCase()?.split(' ')?.join('-')}`}
+      to={`/portfolio/${portfolio?.portfolioName?.toLowerCase()?.split(' ')?.join('-')}`}
       className="relative rounded-2xl group w-full block"
     >
       {/* Portfolio Image */}
-      <Image
+      <img
         src={portfolio?.portfolioHeaderImage}
         alt={portfolio?.portfolioName}
-        width={350}
-        height={350}
-        priority
+        width="350"
+        height="350"
         className={twMerge(
-          'object-cover rounded-2xl w-full  border border-solid border-gray-300',
+          'object-cover rounded-2xl w-full border border-solid border-gray-300',
           masonry ? 'min-h-[300px]' : 'max-h-[350px] sm:min-h-[350px] min-h-[350px]'
         )}
       />
@@ -31,7 +30,6 @@ const PortfolioItem = ({ portfolio, category, primary, masonry }) => {
             {portfolio?.portfolioName}
           </h3>
           {/* Link to Portfolio Details Page */}
-
           <button className="text-lg flex items-center gap-2">
             <span className="group-hover:text-primary transition-colors duration-500">
               See Details
@@ -55,7 +53,7 @@ const PortfolioItem = ({ portfolio, category, primary, masonry }) => {
           </div>
           {/* Link to Portfolio Details Page */}
           <Link
-            href={`/portfolio/${portfolio?.portfolioName?.toLowerCase()?.split(' ')?.join('-')}`}
+            to={`/portfolio/${portfolio?.portfolioName?.toLowerCase()?.split(' ')?.join('-')}`}
             className="text-lg translate-y-12 opacity-0 hover:text-primary group-hover:-translate-y-16 group-hover:opacity-100 transition-all duration-500"
           >
             See Details

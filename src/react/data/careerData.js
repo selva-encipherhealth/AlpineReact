@@ -1,24 +1,24 @@
-import BenefitImg1 from '@/public/assets/images/career/benefits/salary.png';
-import BenefitImg2 from '@/public/assets/images/career/benefits/bonus.png';
-import BenefitImg3 from '@/public/assets/images/career/benefits/performance-bonus.png';
-import BenefitImg4 from '@/public/assets/images/career/benefits/marriage.png';
-import BenefitImg5 from '@/public/assets/images/career/benefits/year-leave.png';
-import BenefitImg6 from '@/public/assets/images/career/benefits/annual-tour.png';
-import BenefitImg7 from '@/public/assets/images/career/benefits/fund.png';
-import BenefitImg8 from '@/public/assets/images/career/benefits/quarterly.png';
-import BenefitImg9 from '@/public/assets/images/career/benefits/friendly-environment.png';
-import BenefitImg10 from '@/public/assets/images/career/benefits/tea.png';
-import BenefitImg11 from '@/public/assets/images/career/benefits/lunch.png';
-import BenefitImg12 from '@/public/assets/images/career/benefits/medical.png';
+import BenefitImg1 from '../public/assets/images/career/benefits/salary.png';
+import BenefitImg2 from '../public/assets/images/career/benefits/bonus.png';
+import BenefitImg3 from '../public/assets/images/career/benefits/performance-bonus.png';
+import BenefitImg4 from '../public/assets/images/career/benefits/marriage.png';
+import BenefitImg5 from '../public/assets/images/career/benefits/year-leave.png';
+import BenefitImg6 from '../public/assets/images/career/benefits/annual-tour.png';
+import BenefitImg7 from '../public/assets/images/career/benefits/fund.png';
+import BenefitImg8 from '../public/assets/images/career/benefits/quarterly.png';
+import BenefitImg9 from '../public/assets/images/career/benefits/friendly-environment.png';
+import BenefitImg10 from '../public/assets/images/career/benefits/tea.png';
+import BenefitImg11 from '../public/assets/images/career/benefits/lunch.png';
+import BenefitImg12 from '../public/assets/images/career/benefits/medical.png';
 
-import LifeAtTechWizardImg1 from '@/public/assets/images/career/life-at-techwizard/life-at-techwizard-1.jpg';
-import LifeAtTechWizardImg2 from '@/public/assets/images/career/life-at-techwizard/life-at-techwizard-2.jpg';
-import LifeAtTechWizardImg3 from '@/public/assets/images/career/life-at-techwizard/life-at-techwizard-3.jpg';
+import LifeAtTechWizardImg1 from '../public/assets/images/career/life-at-techwizard/life-at-techwizard-1.jpg';
+import LifeAtTechWizardImg2 from '../public/assets/images/career/life-at-techwizard/life-at-techwizard-2.jpg';
+import LifeAtTechWizardImg3 from '../public/assets/images/career/life-at-techwizard/life-at-techwizard-3.jpg';
 
-import ApplyImg from '@/public/assets/images/career/join-our-team/apply.jpg';
-import AssessmentImg from '@/public/assets/images/career/join-our-team/assessment.jpg';
-import InterviewImg from '@/public/assets/images/career/join-our-team/interview.jpg';
-import WelcomeImg from '@/public/assets/images/career/join-our-team/welcome.jpg';
+import ApplyImg from '../public/assets/images/career/join-our-team/apply.jpg';
+import AssessmentImg from '../public/assets/images/career/join-our-team/assessment.jpg';
+import InterviewImg from '../public/assets/images/career/join-our-team/interview.jpg';
+import WelcomeImg from '../public/assets/images/career/join-our-team/welcome.jpg';
 
 export const careerData = {
   jobs: [

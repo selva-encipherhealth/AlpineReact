@@ -4,6 +4,8 @@ import Button from '../../Button';
 import { Service } from '../../Service';
 
 const ServicesSection = () => {
+  console.log(typeof(servicesData),"asd");
+  
   return (
     <section id="services-one" className="scroll-mt-28  py-24">
       {/* SERVICE SECTION START */}
@@ -18,6 +20,7 @@ const ServicesSection = () => {
         {/* SERVICES */}
         <ul className="grid xl:grid-cols-3 md:grid-cols-2 lg:gap-10 gap-7">
           {servicesData.slice(0, 6)?.map((item, i) => (
+        
             <Service
               key={i}
               serviceDescription={item.serviceDescription}

@@ -1,7 +1,4 @@
-'use client';
-
-import Image from 'next/image';
-
+import React from 'react';
 import Button from '../../Button';
 import { useModal } from '../../../context/ModalContext';
 
@@ -13,21 +10,19 @@ export const HeroHomeTwO = ({ slider }) => {
       <div className="absolute -z-10 h-full w-full overflow-hidden">
         {/* SLIDER IMAGES AND VIDEO */}
         {slider?.sliderImage && (
-          <Image
+          <img
             src={slider?.sliderImage}
-            priority
             alt={slider?.sliderTitle}
-            width={1920}
-            height={1080}
             className="object-cover h-full w-full object-center"
+            style={{ width: '1920px', height: '1080px' }}
           />
         )}
 
         {slider?.sliderVideo && (
           <video
-            autoPlay={true}
-            muted={true}
-            loop={true}
+            autoPlay
+            muted
+            loop
             controls={false}
             className="h-full w-full object-cover"
           >
@@ -40,7 +35,7 @@ export const HeroHomeTwO = ({ slider }) => {
       <div className="container h-full sm:py-40 py-28 relative z-10 text-white flex items-center">
         <div className="max-w-[850px]">
           {/*------------------------ HERO CONTENT START ------------------------*/}
-          <div className="flex flex-col gap-6 ">
+          <div className="flex flex-col gap-6">
             <p className="px-5 py-2 border-solid border-3 border-primary rounded-full w-fit md:text-2xl text-xl">
               {slider?.sliderTag}
             </p>

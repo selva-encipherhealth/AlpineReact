@@ -34,11 +34,11 @@ const Testimonial = ({ testimonial }) => {
         <p className="md:text-lg">{testimonial?.testimonialDescription}</p>
 
         {/* SOCIAL ICONS */}
-        <ul className="flex items-center gap-5 mt-6">
+        {/* <ul className="flex items-center gap-5 mt-6">
           {testimonial?.socialLinks.map((social, i) => (
             <SocialButton key={i} name={social.name} href={social.link} />
           ))}
-        </ul>
+        </ul> */}
         {/* SOCIAL ICONS */}
       </div>
       {/* TESTIMONIAL CONTENT */}

@@ -1,5 +1,5 @@
 import Job from './Job';
-import Title from '@/components/common/Title';
+import Title from '../../components/common/Title';
 
 const Jobs = ({ jobData }) => {
   return (

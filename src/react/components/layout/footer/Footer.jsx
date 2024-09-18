@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Use react-router-dom for navigation
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import { MdLocationCity } from "react-icons/md";
 import { MdMail } from 'react-icons/md';
 import { IoCall } from 'react-icons/io5';
 import { BsFillPhoneVibrateFill } from 'react-icons/bs';
@@ -29,8 +30,14 @@ const Footer = () => {
   // Address details
   const addressDetails = [
     {
-      text: 'No.81/81, First Floor, Vellalar St, Mohanram Nagar, Mogappair West, Mogappair, Chennai, Tamil Nadu 600037, India',
+      branchName: 'Mogappair Branch',
+      text: 'No.81/81, 1st Floor, Vellalar St, Mohanram Nagar, Mogappair West, Mogappair, Chennai, Tamil Nadu 600037, India',
       icon: FaMapMarkerAlt,
+    },
+    {
+      branchName: 'Ashok Nagar Branch',
+      text: '97, 98, 1st floor, Jawaharlal Nehru Rd Ashok Nagar, Kasi Estate, West Jafferkhanpet, Chennai, Tamil Nadu, 600083',
+      icon: MdLocationCity,
     },
     {
       icon: MdMail,
@@ -105,19 +112,30 @@ const Footer = () => {
                 Get In Touch
               </h5>
               <div className="sm:text-lg space-y-3">
-                {addressDetails.map((line, index) => (
-                  <div key={index} className="flex gap-2">
-                    {line?.icon && <span>{line.icon && <line.icon className="text-3xl" />}</span>}
-                    {line?.href ? (
-                      <a href={line?.href}>
-                        <p>{line.text}</p>
-                      </a>
-                    ) : (
-                      <p>{line.text}</p>
-                    )}
-                  </div>
-                ))}
-              </div>
+  {addressDetails.map((line, index) => (
+    <div key={index} className="flex flex-col gap-2">
+      {/* Display the branch name */}
+      <h3 className="font-semibold">{line.branchName}</h3>
+      
+      <div className="flex gap-2 ">
+        {/* Display the icon if available */}
+        {line?.icon && (
+          <span>
+            <line.icon className="text-3xl" />
+          </span>
+        )}
+        {/* Render the address text with or without href */}
+        {line?.href ? (
+          <a href={line.href} className="text-blue-500 hover:underline">
+            <p>{line.text}</p>
+          </a>
+        ) : (
+          <p>{line.text}</p>
+        )}
+      </div>
+    </div>
+  ))}
+</div>
             </div>
             {/* Address */}
           </div>

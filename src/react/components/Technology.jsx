@@ -1,8 +1,6 @@
-'use client';
-
-import Image from 'next/image';
+import React from 'react';
 import { motion } from 'framer-motion';
-import Reveal from '@/components/common/ScrollAnimation';
+import Reveal from '../components/common/ScrollAnimation'; // Adjust the import path as necessary
 
 const Technology = ({ item }) => {
   return (
@@ -19,7 +17,13 @@ const Technology = ({ item }) => {
           }}
         >
           {/* TECHNOLOGY IMAGE */}
-          <Image src={item?.image} alt={item?.name} width={80} height={80} priority />
+          <img
+            src={item?.image}
+            alt={item?.name}
+            width={80}
+            height={80}
+            loading="lazy" // Equivalent to priority in Next.js
+          />
         </motion.div>
 
         {/* TECHNOLOGY NAME AND OVERLAY */}

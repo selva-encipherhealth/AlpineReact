@@ -1,11 +1,11 @@
 'use client';
 
-import Button from '@/components/Button';
-import Loader from '@/components/common/Loader';
-import Title from '@/components/common/Title';
+import Button from '../../components/Button';
+import Loader from '../../components/common/Loader';
+import Title from '../../components/common/Title';
 
-import { careerData } from '@/data/careerData';
-import useLoader from '@/hooks/useLoader';
+import { careerData } from '../../data/careerData';
+import useLoader from '../../hooks/useLoader';
 import HeroCareer from './HeroCareer';
 import LifeAtTechwizard from './LifeAtTechwizard';
 import Benefits from './Benefits';

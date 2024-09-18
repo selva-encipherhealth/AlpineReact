@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://venu-innoura.github.io/alpine-react",
+  "homepage": "https://github.com/selva-encipherhealth/AlpineReact/alpineprohealth",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -55,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "autoprefixer": "^10.4.20",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",

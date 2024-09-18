@@ -38,7 +38,7 @@ export const HeroHomeOne = ({ slider }) => {
           </video>
         )}
 
-        <div className="absolute inset-0 bg-[#04172e] bg-opacity-80 backdrop-blur-[2px]"></div>
+        <div className="absolute inset-0  backdrop-blur-[2px]"></div>
       </div>
       <div className="container h-full grid place-items-center sm:py-40 py-28 relative z-10 text-white">
         <div className="max-w-[850px]">

@@ -1,5 +1,5 @@
-import { servicesData } from '@/data/serviceData';
-import { Service } from '@/components/Service';
+import { servicesData } from '../../data/serviceData';
+import { Service } from '../../components/Service';
 
 const ServiceSection = () => {
   return (

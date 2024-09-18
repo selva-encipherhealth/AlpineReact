@@ -1,9 +1,8 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import React from 'react';
 import { FaCalendarAlt, FaFacebook, FaLinkedin, FaTag, FaUserAlt } from 'react-icons/fa';
 import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from 'react-share';
-import Reveal from '@/components/common/ScrollAnimation';
-import { blogData } from '@/data/blogData';
+import Reveal from '../../components/common/ScrollAnimation'; // Adjust the import path as necessary
+import { blogData } from '../../data/blogData'; // Adjust the import path as necessary
 
 const BlogDetail = ({ currentBlog }) => {
   const options = { year: 'numeric', month: 'short', day: 'numeric' };
@@ -14,12 +13,12 @@ const BlogDetail = ({ currentBlog }) => {
       <Reveal from={50}>
         {/* BLOG IMAGE */}
         <div className="image">
-          <Image
+          <img
             src={currentBlog?.image}
             alt="Blog Image"
             width={1000}
             height={500}
-            priority
+            loading="lazy" // Equivalent to priority in Next.js
             className="w-full object-cover max-h-[500px] object-bottom rounded-xl bg-gray-200"
           />
         </div>
@@ -33,9 +32,9 @@ const BlogDetail = ({ currentBlog }) => {
           </span>
           <p>
             By{' '}
-            <Link href="#" className="text-primary hover:underline">
+            <a href="#" className="text-primary hover:underline">
               {currentBlog?.author}
-            </Link>
+            </a>
           </p>
         </li>
 
@@ -60,10 +59,10 @@ const BlogDetail = ({ currentBlog }) => {
             <ul className="flex items-center flex-wrap gap-1">
               {currentBlog?.tags?.map((tag, i) => (
                 <li key={i}>
-                  <Link href="#" className="text-primary hover:underline">
+                  <a href="#" className="text-primary hover:underline">
                     {tag}
                     {', '}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -71,7 +70,7 @@ const BlogDetail = ({ currentBlog }) => {
         </li>
       </ul>
 
-      <h3 className="text-4xl font-semibold  my-3">{currentBlog?.title}</h3>
+      <h3 className="text-4xl font-semibold my-3">{currentBlog?.title}</h3>
 
       {/* BLOG CONTENT */}
       <p
@@ -81,17 +80,17 @@ const BlogDetail = ({ currentBlog }) => {
         }}
       />
 
-      {/* IMages */}
+      {/* IMAGES */}
       <ul className="grid md:grid-cols-2 gap-8 my-12">
         {currentBlog?.images?.map((image, i) => (
           <Reveal from={50} key={i}>
             <li className="image">
-              <Image
+              <img
                 src={image}
                 alt="Image"
                 width={500}
                 height={500}
-                priority
+                loading="lazy" // Equivalent to priority in Next.js
                 className="rounded-md bg-gray-200 w-full object-cover h-[300px]"
               />
             </li>
@@ -110,9 +109,9 @@ const BlogDetail = ({ currentBlog }) => {
               ?.slice(0, 3)
               ?.map((category, i) => (
                 <li key={i} className="bg-gray-50 border border-solid border-gray-200 rounded-md">
-                  <Link href="#" className="px-4 py-2 inline-block">
+                  <a href="#" className="px-4 py-2 inline-block">
                     {category}
-                  </Link>
+                  </a>
                 </li>
               ))}
           </ul>

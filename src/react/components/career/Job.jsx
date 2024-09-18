@@ -1,9 +1,9 @@
 import React from 'react';
 import { MdOutlineAccessTime } from 'react-icons/md';
 import { SlLocationPin } from 'react-icons/sl';
-import Button from '@/components/Button';
-import Reveal from '@/components/common/ScrollAnimation';
-import Link from 'next/link';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import Button from '../../components/Button';
+import Reveal from '../../components/common/ScrollAnimation';
 
 const Job = ({ title, description, location, employmentType, department }) => {
   return (
@@ -12,7 +12,7 @@ const Job = ({ title, description, location, employmentType, department }) => {
         <div className="flex flex-col gap-3">
           {/* JOB TITLE */}
           <Link
-            href={`/career/${title?.toLowerCase()?.split(' ')?.join('-')}`}
+            to={`/career/${title?.toLowerCase()?.split(' ')?.join('-')}`} // Use `to` prop for routing
             className="hover:text-primary transition-all duration-500 w-fit"
           >
             <h2 className="text-3xl font-semibold">{title}</h2>
@@ -45,7 +45,7 @@ const Job = ({ title, description, location, employmentType, department }) => {
         <div>
           <Button
             primary={false}
-            link={`/career/${title?.toLowerCase()?.split(' ')?.join('-')}`}
+            link={`/career/${title?.toLowerCase()?.split(' ')?.join('-')}`} // Update link format
             text={'See Details'}
           />
         </div>

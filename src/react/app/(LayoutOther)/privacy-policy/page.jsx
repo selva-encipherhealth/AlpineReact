@@ -1,11 +1,11 @@
 'use client';
 
 /* eslint-disable react/no-unescaped-entities */
-import { Breadcrumb } from '@/components/common/Breadcrumb';
-import Loader from '@/components/common/Loader';
-import useLoader from '@/hooks/useLoader';
-import Link from 'next/link';
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from React Router
+import { Breadcrumb } from '../../components/common/Breadcrumb'; // Make sure this path is correct
+import Loader from '../../components/common/Loader';
+import useLoader from '../../../hooks/useLoader';
 
 const PrivacyPage = () => {
   const loading = useLoader();

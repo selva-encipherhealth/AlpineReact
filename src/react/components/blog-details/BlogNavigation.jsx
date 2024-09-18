@@ -1,12 +1,13 @@
-import Link from 'next/link';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { IoAppsOutline } from 'react-icons/io5';
 
 const BlogNavigation = ({ prevBlog, nextBlog }) => {
   return (
     <>
-      {/* BLOG NAVIAGTION */}
+      {/* BLOG NAVIGATION */}
 
-      {/* PREVIOUES BLOG */}
+      {/* PREVIOUS BLOG */}
       {prevBlog && nextBlog && (
         <ul
           className={`flex ${
@@ -17,7 +18,7 @@ const BlogNavigation = ({ prevBlog, nextBlog }) => {
             <li>
               <p className="text-lg text-gray-600">Prev Post</p>
               <Link
-                href={`/blog/${prevBlog?.title?.toLowerCase()?.split(' ')?.join('-')}`}
+                to={`/blog/${prevBlog?.title?.toLowerCase()?.split(' ')?.join('-')}`}
                 className="max-w-[300px] line-clamp-2 text-2xl font-semibold hover:text-primary transition-all duration-500"
               >
                 {prevBlog?.title}
@@ -36,7 +37,7 @@ const BlogNavigation = ({ prevBlog, nextBlog }) => {
             <li>
               <p className="text-lg text-gray-600">Next Post</p>
               <Link
-                href={`/blog/${nextBlog?.title?.toLowerCase()?.split(' ')?.join('-')}`}
+                to={`/blog/${nextBlog?.title?.toLowerCase()?.split(' ')?.join('-')}`}
                 className="max-w-[300px] line-clamp-2 text-2xl font-semibold hover:text-primary transition-all duration-500"
               >
                 {nextBlog?.title}

@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Title from '@/components/common/Title';
+import React from 'react';
+import Title from '../../components/common/Title'; // Adjust the import path as necessary
 
 const Benefits = ({ benefitsData }) => {
   return (
@@ -20,7 +20,13 @@ const Benefits = ({ benefitsData }) => {
                 key={benefit?.id}
                 className="flex items-center gap-3 p-6 rounded-md bg-gray-800 bg-opacity-70 backdrop-blur-md border border-glass shadow-sm text-xl text-gray-50"
               >
-                <Image src={benefit?.icon} width={40} height={40} alt={benefit?.text} />
+                <img
+                  src={benefit?.icon}
+                  alt={benefit?.text}
+                  width={40}
+                  height={40}
+                  className="object-cover"
+                />
                 <p>{benefit?.text}</p>
               </li>
             ))}

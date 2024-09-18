@@ -1,5 +1,5 @@
 import { useModal } from '../context/ModalContext'
-import Button from '@/components/Button';
+import Button from '../components/Button';
 
 const PromoBox = () => {
   const { setIsModalOpen } = useModal();
